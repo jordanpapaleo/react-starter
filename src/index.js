@@ -3,7 +3,7 @@ import './styles.less'
 
 import debug from 'debug'
 import React from 'react'
-import App from './components/App.js'
+import App from './views/App.js'
 
 const log = debug('application:bootstrap')
 
