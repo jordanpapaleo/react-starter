@@ -1,0 +1,16 @@
+# Logs
+logs
+*.log
+.git
+
+# Dependency directory
+node_modules
+
+# Stuff
+coverage
+
+# OS X
+.DS_Store
+
+# Builds
+/dist
