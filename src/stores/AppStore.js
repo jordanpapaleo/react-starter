@@ -5,7 +5,7 @@ class AppStore extends Store {
   constructor () {
     super()
     this.subscribe(() => this._registerToActions.bind(this))
-    this.testData = ['A', 'B', 'C']
+    this.testData = '1234'
   }
 
   _registerToActions (dispatch) {

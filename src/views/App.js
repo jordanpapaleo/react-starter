@@ -7,23 +7,19 @@ class App extends Component {
     super(props)
 
     this.state = {
-      title: 'App'
+      title: AppStore.getTestData()
     }
 
     this.test = this.test.bind(this)
-    this.updateTitle = this.updateTitle.bind(this)
   }
 
   componentWillMount () {
-    AppStore.addChangeListener(this.updateTitle)
-  }
-
-  componentWillUnmount () {
-    AppStore.removeChangeListener(this.updateTitle)
-  }
-
-  updateTitle (title) {
-    this.setState({ title })
+    this.testStore = AppStore.addChangeListener((blar) => {
+      this.setState({
+        title: blar
+      })
+      console.log('TEST made it', blar)
+    })
   }
 
   test () {
